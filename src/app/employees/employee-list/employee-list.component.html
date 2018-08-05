@@ -1,0 +1,23 @@
+<h6 class="text-center">Employee Registered</h6>
+<table class="table table-sm table-hover table-bordered">
+  <thead>
+    <th>Name</th>
+    <th>Position</th>
+    <th></th>
+    <th></th>
+  </thead>
+  <tr *ngFor="let employee of employeeList">
+    <td>{{employee.name}}</td>
+    <td>{{employee.position}}</td>
+    <td>
+      <a class="btn" (click) = "onEdit(employee)">
+      <i class="fa fa-pencil-square-o"></i>
+    </a>
+    </td>
+    <td>
+      <a class="btn">
+        <i class="fa fa-trash-o" (click)="onDelete(employee.$key)"></i>
+      </a>
+    </td>
+  </tr>
+</table>
